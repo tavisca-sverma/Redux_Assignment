@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { render } from '@testing-library/react';
+import UserForm from './containers/UserForm';
+import StateDisplay from './components/StateDisplay';
+
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+     <div className="UserForm" >
+      
+       <h3>User Details</h3>
+
+        <UserForm/>
+
+        <button >Submit</button>
+
+     </div>
+
+      <StateDisplay identifier={"First Name"}/>
+      <StateDisplay identifier={"Last Name"}/>
     </div>
   );
 }
